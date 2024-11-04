@@ -11,5 +11,12 @@ const loadUsers=()=>{
 }
 
 const displayUsers=(data)=>{
-    console(data)
+    for(const it of data){
+        console.log(it);
+        
+        const p=document.createElement('p')
+        p.innerHTML=`<p style="border:5px solid purple;padding:10px;margin:10px;text-align:center">Name: ${it.name}, Phone: ${it.phone}, Email: ${it.email}</p>`
+        document.getElementById("email").appendChild(p)   
+        
+    }
 }
